@@ -1,0 +1,15 @@
+Habilitando a biblioteca intl no PHP para criação do projeto tutorial laminas-mvc-skeleton
+Site de referência: https://www.dotkernel.com/php-troubleshooting/where-is-the-intl-php-extension-problem-solved/
+
+1 - Verificar se a biblioteca intl.so existe, no diretório: /usr/lib/php/20190902 com o comando ls -laF
+2 - Caso não exista, instale-a com o comando: sudo apt-get install php7.4-intl 
+3 - Depois de instalada (ou no caso da biblioteca já existir) acesse o arquivo php.ini, localizado no diretório: /etc/php/7.4/apache2 e descomente
+    os trechos de códigos abaixo. Crie uma copia do segurança do arquivo php.ini com o comando: sudo cp php.ini php.old.ini caso dê algum problema
+	extension=intl 
+	...
+	intl.default_locale =
+	intl.error_level = E_WARNING
+	intl.use_exceptions = 0
+4 - Repita os passos descritos na etapa anterior (3), só que no diretório: /etc/php/7.4/cli
+5 - Reinicializa seu servidor apache com o comando: sudo service apache2 restart
+
