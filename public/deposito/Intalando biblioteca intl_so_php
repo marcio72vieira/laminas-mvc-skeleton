@@ -13,3 +13,10 @@ Site de referência: https://www.dotkernel.com/php-troubleshooting/where-is-the-
 4 - Repita os passos descritos na etapa anterior (3), só que no diretório: /etc/php/7.4/cli
 5 - Reinicializa seu servidor apache com o comando: sudo service apache2 restart
 
+Altere a diretiva short_tag Off para On, nos arquivos php.ini localizados nos diretórios abaixo, mas antes, faça uma cópia dos
+mesmos, com o comando: sudo cp php.ini php.old.ini 
+	/etc/php/7.4/apache2/php.ini
+	/etc/php/7.4/cli/php.ini 
+
+	reinicie o servidor com sudo service apache2 restart
+
