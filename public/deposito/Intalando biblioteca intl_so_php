@@ -20,3 +20,14 @@ mesmos, com o comando: sudo cp php.ini php.old.ini
 
 	reinicie o servidor com sudo service apache2 restart
 
+
+Instale a biblioteca sqlite3 e reinicialize o servidor 
+	sudo apt install php7.4-sqlite3
+	
+Habilite as bibliotecas como abaixo no arquivo php.ini nos diretórios /etc/php/7.4./apache2 e /etc/php/7.4/cli
+	extension=pdo_sqlite
+	extension=sqlite3
+
+
+
+

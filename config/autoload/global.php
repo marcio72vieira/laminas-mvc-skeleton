@@ -12,6 +12,8 @@
  * file.
  */
 
+use Laminas\Db\Adapter;
+
 return [
     'db' => [
         'driver' => 'Pdo',
