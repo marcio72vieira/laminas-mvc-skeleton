@@ -31,6 +31,18 @@
         <nav class="navbar navbar-expand-md navbar-dark mb-4" role="navigation">
             <div class="container">
                 <div class="navbar-header">
+                    <!-- mrc -->
+                    <?php // in module/Application/view/layout/layout.phtml: ?>
+                    <div class="collapse navbar-collapse">
+                        <?php // add this: ?>
+                        <?= $this->navigation('navigation')
+                            ->menu()
+                            ->setMinDepth(0)
+                            ->setMaxDepth(0)
+                            ->setUlClass('nav navbar-nav')
+                        ?>
+                    </div>
+                    <!-- mrc -->
                     <button
                         class="navbar-toggler"
                         type="button"
